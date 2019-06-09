@@ -8,10 +8,6 @@ Resources:
           AttributeType: S
         - AttributeName: artWorkId
           AttributeType: S
-        - AttributeName: title
-          AttributeType: S
-        - AttributeName: description
-          AttributeType: S
       KeySchema:
         - AttributeName: userId
           KeyType: HASH
