@@ -16,9 +16,14 @@ export async function main(event, context) {
   };
 
   try {
+    console.log("just before calling dynamodb put");
+    console.log("params is: " + JSON.stringify(params));
     await dynamoDbLib.call("put", params);
+    console.log("dynamodb put call now completed");
     return success(params.Item);
   } catch (e) {
+    console.log("catch called");
+    console.log("error message is: " + JSON.stringify(e));
     return failure({ status: false });
   }
 }
