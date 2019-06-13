@@ -14,6 +14,7 @@ export async function main(event, context) {
   };
 
   try {
+    console.log("params is: " + JSON.stringify(params));
     const result = await dynamoDbLib.call("get", params);
     console.log("result is: " + JSON.stringify(result));
     if (result.Item) {
