@@ -21,6 +21,9 @@ export async function main(event, context) {
       console.log("just before returning success");
       return success(result.Item);
     } else {
+      console.log(
+        "no result object - just before returning failure item not found"
+      );
       return failure({ status: false, error: "Item not found." });
     }
   } catch (e) {
